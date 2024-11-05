@@ -163,4 +163,97 @@ Kooperatif üyelerine sağlanan eğitimleri takip eder.
 | GeriBildirimTarihi | DATE  | Geri bildirimin yapıldığı tarih.               |
 | GeriBildirim  | TEXT      | Üyenin geri bildirimi.                          |
 
-Bu yapı, kooperatiflerin çeşitli operasyonel süreçlerini etkili bir şekilde takip etmelerini sağlar. Hem finansal veriler, hem tedarik zinciri hem de üye memnuniyeti gibi kritik konular için güçlü bir veri altyapısı oluşturur.
+İlişkiler
+1. Kooperatif - Üye (1
+)
+İlişki Açıklaması: Bir kooperatifin birden fazla üyesi olabilir. Her üye yalnızca bir kooperatife aittir.
+Birincil Tablo: Kooperatif
+Bağlı Tablo: Üye
+Bağlantı: Kooperatif.KooperatifID = Üye.KooperatifID
+2. Kooperatif - Kooperatif_Ürün (1
+)
+İlişki Açıklaması: Bir kooperatif birden fazla ürüne sahip olabilir.
+Birincil Tablo: Kooperatif
+Bağlı Tablo: Kooperatif_Ürün
+Bağlantı: Kooperatif.KooperatifID = Kooperatif_Ürün.KooperatifID
+3. Kooperatif - Tedarikçi (1
+)
+İlişki Açıklaması: Bir kooperatifin birden fazla tedarikçisi olabilir.
+Birincil Tablo: Kooperatif
+Bağlı Tablo: Tedarikçi
+Bağlantı: Kooperatif.KooperatifID = Tedarikçi.KooperatifID
+4. Tedarikçi - Tedarikçi_Ürün (1
+)
+İlişki Açıklaması: Bir tedarikçi birden fazla ürünü sağlayabilir.
+Birincil Tablo: Tedarikçi
+Bağlı Tablo: Tedarikçi_Ürün
+Bağlantı: Tedarikçi.TedarikciID = Tedarikçi_Ürün.TedarikciID
+5. Üye - Kooperatif_Sipariş (1
+)
+İlişki Açıklaması: Bir üye birden fazla sipariş verebilir.
+Birincil Tablo: Üye
+Bağlı Tablo: Kooperatif_Sipariş
+Bağlantı: Üye.UyeID = Kooperatif_Sipariş.UyeID
+6. Kooperatif_Sipariş - Kooperatif_Sipariş_Detayı (1
+)
+İlişki Açıklaması: Bir sipariş birden fazla ürün içerebilir.
+Birincil Tablo: Kooperatif_Sipariş
+Bağlı Tablo: Kooperatif_Sipariş_Detayı
+Bağlantı: Kooperatif_Sipariş.SiparisID = Kooperatif_Sipariş_Detayı.SiparisID
+7. Kooperatif_Ürün - Kooperatif_Sipariş_Detayı (1
+)
+İlişki Açıklaması: Bir sipariş detayında bir ürün yer alabilir.
+Birincil Tablo: Kooperatif_Ürün
+Bağlı Tablo: Kooperatif_Sipariş_Detayı
+Bağlantı: Kooperatif_Ürün.KooperatifUrunID = Kooperatif_Sipariş_Detayı.KooperatifUrunID
+8. Tedarikçi - Tedarikçi_Sipariş (1
+)
+İlişki Açıklaması: Bir tedarikçiden birden fazla sipariş verilebilir.
+Birincil Tablo: Tedarikçi
+Bağlı Tablo: Tedarikçi_Sipariş
+Bağlantı: Tedarikçi.TedarikciID = Tedarikçi_Sipariş.TedarikciID
+9. Tedarikçi_Sipariş - Tedarikçi_Sipariş_Detayı (1
+)
+İlişki Açıklaması: Bir tedarikçi siparişi birden fazla ürün içerebilir.
+Birincil Tablo: Tedarikçi_Sipariş
+Bağlı Tablo: Tedarikçi_Sipariş_Detayı
+Bağlantı: Tedarikçi_Sipariş.TedarikciSiparisID = Tedarikçi_Sipariş_Detayı.TedarikciSiparisID
+10. Tedarikçi_Ürün - Tedarikçi_Sipariş_Detayı (1
+)
+İlişki Açıklaması: Bir tedarikçi sipariş detayı bir ürünü içerebilir.
+Birincil Tablo: Tedarikçi_Ürün
+Bağlı Tablo: Tedarikçi_Sipariş_Detayı
+Bağlantı: Tedarikçi_Ürün.TedarikciUrunID = Tedarikçi_Sipariş_Detayı.TedarikciUrunID
+11. Kooperatif - Finansal_Veriler (1
+)
+İlişki Açıklaması: Bir kooperatifin birden fazla finansal kaydı olabilir.
+Birincil Tablo: Kooperatif
+Bağlı Tablo: Finansal_Veriler
+Bağlantı: Kooperatif.KooperatifID = Finansal_Veriler.KooperatifID
+12. Üye - Yardım (1
+)
+İlişki Açıklaması: Bir üye birden fazla yardım alabilir.
+Birincil Tablo: Üye
+Bağlı Tablo: Yardım
+Bağlantı: Üye.UyeID = Yardım.UyeID
+13. Kooperatif - Etkinlik (1
+)
+İlişki Açıklaması: Bir kooperatif birden fazla etkinlik düzenleyebilir.
+Birincil Tablo: Kooperatif
+Bağlı Tablo: Etkinlik
+Bağlantı: Kooperatif.KooperatifID = Etkinlik.KooperatifID
+14. Kooperatif - Eğitim (1
+)
+İlişki Açıklaması: Bir kooperatif birden fazla eğitim düzenleyebilir.
+Birincil Tablo: Kooperatif
+Bağlı Tablo: Eğitim
+Bağlantı: Kooperatif.KooperatifID = Eğitim.KooperatifID
+15. Üye - Üye_Geri_Bildirim (1
+)
+İlişki Açıklaması: Bir üye birden fazla geri bildirim yapabilir.
+Birincil Tablo: Üye
+Bağlı Tablo: Üye_Geri_Bildirim
+Bağlantı: Üye.UyeID = Üye_Geri_Bildirim.UyeID
+Özet
+1:N ilişkiler, bir ana tablo (birincil tablo) ile ona bağlı olan birden fazla kayıt tutan bağlı tablo (bağlı tablo) arasında kurulur.
+Tabloların ilişkilendirilmesi için Foreign Key kullanılır, bu sayede ilgili tablolar arasındaki veri tutarlılığı sağlanır.
