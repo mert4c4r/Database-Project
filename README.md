@@ -1,6 +1,6 @@
 # Tarım Kooperatifleri Yönetim Sistemi
 
-## Proje Üyeleri
+*Proje Ekibindeki Kişiler:*
 
 
 - *225260050* - Ömer Faruk Mutlu
