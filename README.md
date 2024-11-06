@@ -214,16 +214,3 @@ Aşağıda, sistemin kullandığı ana tablolar, kolonlar ve tablolar arasındak
 ### Tedarikçi - Tedarikçi_Sipariş
 - **İlişki Türü:** 1 Tedarikçi ⇔ N Tedarikçi_Sipariş
 - **Açıklama:** Bir tedarikçi birden fazla sipariş alabilir.
-
-## Kullanım
-
-1. Veritabanını kurun ve tabloları oluşturun.
-2. Kooperatif bilgilerini ve ürünleri girin.
-3. Üye kayıtlarını ve siparişleri ekleyin.
-4. Tedarikçi ilişkilerini ve sipariş detaylarını yönetin.
-
-Bu proje, kooperatiflerin verimli bir şekilde yönetilmesine yardımcı olacak temel işlevleri içerir.
-
-## Lisans
-
-Bu proje, [MIT Lisansı](https://opensource.org/licenses/MIT) altında lisanslanmıştır.
