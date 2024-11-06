@@ -230,8 +230,7 @@ Aşağıda, sistemin kullandığı ana tablolar, kolonlar ve tablolar arasındak
 ## ER Diyagramı
 
 
-![E-R Diyagramı](https://github.com/user-attachments/assets/16434c57-ccd1-4c58-811c-b14c6f4a5d0b)
-
+![E-R Diyagramı](https://github.com/user-attachments/assets/9110178d-1a57-4f0c-a1bc-b78939d3f2c7)
 
 
 
