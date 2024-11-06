@@ -225,6 +225,8 @@ Aşağıda, sistemin kullandığı ana tablolar, kolonlar ve tablolar arasındak
 - **İlişki Türü:** 1 Tedarikçi ⇔ N Tedarikçi_Sipariş
 - **Açıklama:** Bir tedarikçi birden fazla sipariş alabilir.
 
+## ER Diyagramı
+
 
 ![E-R Diyagramı](https://github.com/user-attachments/assets/16434c57-ccd1-4c58-811c-b14c6f4a5d0b)
 
