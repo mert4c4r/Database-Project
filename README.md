@@ -1,6 +1,6 @@
 # Tarım Kooperatifleri Yönetim Sistemi
 
-### Proje Gereksinimleri
+## Proje Gereksinimleri
 
 Bu proje, kooperatiflerin üyeleri, tedarikçileri, ürünleri ve sipariş süreçlerini yönetmek amacıyla geliştirilmiş bir veritabanı modelini içermektedir. Sistem, kooperatiflerin mali verilerini, ürün fiyatlandırmalarını, üyelerin verdikleri siparişleri, tedarikçi ilişkilerini ve diğer birçok işlevi takip etmeye yönelik olarak tasarlanmıştır.
 
