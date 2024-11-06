@@ -143,7 +143,7 @@ Aşağıda, sistemin kullandığı ana tablolar ve ilişkiler açıklanmıştır
   - `MinSatisFiyati`: Ürünün minimum satış fiyatı.
   - `GeçerlilikTarihi`: Fiyatlandırmanın geçerli olduğu tarih.
 
-### 14. Nakil
+### 14. Nakiliyat
 
 - **Amaç:** Ürün nakil işlemlerini takip etmek. Bu tablo, hangi ürünlerin ne zaman ve hangi kooperatif veya tedarikçi arasında nakledildiğini içerir.
 - **Kolonlar:**
