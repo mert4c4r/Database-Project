@@ -4,7 +4,7 @@ Bu proje, kooperatiflerin üyeleri, tedarikçileri, ürünleri ve sipariş süre
 
 ## Veritabanı Yapısı
 
-Aşağıda, sistemin kullandığı ana tablolar ve ilişkiler açıklanmıştır:
+Aşağıda, sistemin kullandığı ana tablolar, kolonlar ve tablolar arasındaki ilişkiler açıklanmıştır:
 
 ### 1. Kooperatif
 
@@ -143,7 +143,7 @@ Aşağıda, sistemin kullandığı ana tablolar ve ilişkiler açıklanmıştır
   - `MinSatisFiyati`: Ürünün minimum satış fiyatı.
   - `GeçerlilikTarihi`: Fiyatlandırmanın geçerli olduğu tarih.
 
-### 14. Nakiliyat
+### 14. Nakil
 
 - **Amaç:** Ürün nakil işlemlerini takip etmek. Bu tablo, hangi ürünlerin ne zaman ve hangi kooperatif veya tedarikçi arasında nakledildiğini içerir.
 - **Kolonlar:**
@@ -153,16 +153,67 @@ Aşağıda, sistemin kullandığı ana tablolar ve ilişkiler açıklanmıştır
   - `Miktar`: Nakil edilen ürün miktarı.
   - `Tarih`: Nakil işleminin gerçekleştiği tarih.
 
-## İlişkiler ve Nitelikler
+## İlişkiler
 
-Proje içerisindeki tablolar birbirleriyle çeşitli ilişkiler içermektedir. Bu ilişkiler, veri bütünlüğü ve sistemin doğru çalışabilmesi için oldukça önemlidir.
+### Kooperatif - Üye
+- **İlişki Türü:** 1 Kooperatif ⇔ N Üye
+- **Açıklama:** Bir kooperatif birden fazla üye barındırabilir, ancak her üye yalnızca bir kooperatifle ilişkilidir.
 
-- **Kooperatif - Üye:** Bir kooperatif, birçok üye barındırabilir.
-- **Kooperatif - Kooperatif_Ürün:** Bir kooperatif, birçok ürün sunabilir.
-- **Kooperatif - Tedarikçi:** Bir kooperatif, birden fazla tedarikçiden ürün alabilir.
-- **Kooperatif_Ürün - Ürün_Fiyatlandırma:** Her kooperatif ürününün fiyatlandırması vardır.
-- **Tedarikçi - Tedarikçi_Ürün:** Her tedarikçi, birden fazla ürün tedarik edebilir.
-- **Tedarikçi - Tedarikçi_Sipariş:** Bir tedarikçi, birden fazla sipariş alabilir.
+### Kooperatif - Kooperatif_Ürün
+- **İlişki Türü:** 1 Kooperatif ⇔ N Kooperatif_Ürün
+- **Açıklama:** Bir kooperatif birçok ürün sunabilir.
+
+### Kooperatif - Tedarikçi
+- **İlişki Türü:** 1 Kooperatif ⇔ N Tedarikçi
+- **Açıklama:** Bir kooperatif, birden fazla tedarikçiden ürün alabilir.
+
+### Kooperatif_Ürün - Ürün_Fiyatlandırma
+- **İlişki Türü:** 1 Kooperatif_Ürün ⇔ 1 Ürün_Fiyatlandırma
+- **Açıklama:** Her kooperatif ürününün belirli bir fiyatlandırma kaydı vardır.
+
+### Tedarikçi - Tedarikçi_Ürün
+- **İlişki Türü:** 1 Tedarikçi ⇔ N Tedarikçi_Ürün
+- **Açıklama:** Her tedarikçi birden fazla ürünü tedarik edebilir.
+
+### Tedarikçi_Ürün - Ürün_Fiyatlandırma
+- **İlişki Türü:** 1 Tedarikçi_Ürün ⇔ 1 Ürün_Fiyatlandırma
+- **Açıklama:** Tedarikçi ürünlerinin de belirli bir fiyatlandırma kaydı vardır.
+
+### Üye - Kooperatif_Sipariş
+- **İlişki Türü:** 1 Üye ⇔ N Kooperatif_Sipariş
+- **Açıklama:** Her üye birden fazla sipariş verebilir.
+
+### Kooperatif_Sipariş - Kooperatif_Sipariş_Detayı
+- **İlişki Türü:** 1 Kooperatif_Sipariş ⇔ N Kooperatif_Sipariş_Detayı
+- **Açıklama:** Bir sipariş birden fazla ürün içerebilir.
+
+### Tedarikçi_Sipariş - Tedarikçi_Sipariş_Detayı
+- **İlişki Türü:** 1 Tedarikçi_Sipariş ⇔ N Tedarikçi_Sipariş_Detayı
+- **Açıklama:** Bir tedarikçi siparişi birden fazla ürün içerebilir.
+
+### Kooperatif - Finansal_Veriler
+- **İlişki Türü:** 1 Kooperatif ⇔ N Finansal_Veriler
+- **Açıklama:** Her kooperatif birden fazla finansal kayıt tutar.
+
+### Üye - Yardım
+- **İlişki Türü:** 1 Üye ⇔ N Yardım
+- **Açıklama:** Her üye birden fazla yardım alabilir.
+
+### Kooperatif - Etkinlik
+- **İlişki Türü:** 1 Kooperatif ⇔ N Etkinlik
+- **Açıklama:** Her kooperatif birden fazla etkinlik düzenleyebilir.
+
+### Kooperatif - Nakil
+- **İlişki Türü:** 1 Kooperatif ⇔ N Nakil
+- **Açıklama:** Bir kooperatif birden fazla nakil işlemi gerçekleştirebilir.
+
+### Tedarikçi - Nakil
+- **İlişki Türü:** 1 Tedarikçi ⇔ N Nakil
+- **Açıklama:** Her tedarikçi birden fazla nakil işlemi yapabilir.
+
+### Tedarikçi - Tedarikçi_Sipariş
+- **İlişki Türü:** 1 Tedarikçi ⇔ N Tedarikçi_Sipariş
+- **Açıklama:** Bir tedarikçi birden fazla sipariş alabilir.
 
 ## Kullanım
 
@@ -171,5 +222,8 @@ Proje içerisindeki tablolar birbirleriyle çeşitli ilişkiler içermektedir. B
 3. Üye kayıtlarını ve siparişleri ekleyin.
 4. Tedarikçi ilişkilerini ve sipariş detaylarını yönetin.
 
+Bu proje, kooperatiflerin verimli bir şekilde yönetilmesine yardımcı olacak temel işlevleri içerir.
 
+## Lisans
 
+Bu proje, [MIT Lisansı](https://opensource.org/licenses/MIT) altında lisanslanmıştır.
