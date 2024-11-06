@@ -214,11 +214,11 @@ Aşağıda, sistemin kullandığı ana tablolar, kolonlar ve tablolar arasındak
 - **İlişki Türü:** 1 Kooperatif ⇔ N Etkinlik
 - **Açıklama:** Her kooperatif birden fazla etkinlik düzenleyebilir.
 
-### 13.) Kooperatif - Nakil
+### 13.) Kooperatif - Nakliyat
 - **İlişki Türü:** 1 Kooperatif ⇔ N Nakil
 - **Açıklama:** Bir kooperatif birden fazla nakil işlemi gerçekleştirebilir.
 
-### 14.) Tedarikçi - Nakil
+### 14.) Tedarikçi - Nakliyat
 - **İlişki Türü:** 1 Tedarikçi ⇔ N Nakil
 - **Açıklama:** Her tedarikçi birden fazla nakil işlemi yapabilir.
 
