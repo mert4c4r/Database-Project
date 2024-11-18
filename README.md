@@ -5,7 +5,6 @@
 
 - *225260050* - Ömer Faruk Mutlu
 - *225260066* - Yasin Mert Acar
-- *225260012* - Yusuf Vural
 
 
 
